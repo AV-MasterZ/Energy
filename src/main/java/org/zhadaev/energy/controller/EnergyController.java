@@ -16,6 +16,11 @@ public class EnergyController {
     private EnergyDao energyDao;
 
     @GetMapping("/")
+    public String startPage() {
+        return "energy";
+    }
+
+    @GetMapping("/table")
     @ResponseBody
     public List<Form> getAllForms() {
         return energyDao.getAllForms();
